@@ -1,0 +1,37 @@
+{% extends 'one.html' %}
+
+{% block content %}
+<div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+    <h1 style="color: #333; font-size: 3rem; margin-bottom: 20px;">Hello World!</h1>
+    <p style="color: #666; font-size: 1.2rem; margin-bottom: 30px;">Welcome to Django Template Inheritance</p>
+
+    <div style="margin-bottom: 30px;">
+        <li class="nav-item" role="presentation">
+            <a href="{% url 'hello' %}">hello</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a href="{% url 'one' %}">one.html</a>
+        </li>
+    </div>
+    
+    <div style="background: #f0f0f0; padding: 20px; border-radius: 10px; max-width: 500px; margin: 0 auto;">
+        <h2 style="color: #444;">Template Features:</h2>
+        <ul style="text-align: left; color: #555;">
+            <li>✅ Base template with blocks</li>
+            <li>✅ Child template inheritance</li>
+            <li>✅ Dynamic content rendering</li>
+            <li>✅ Clean HTML structure</li>
+        </ul>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <p style="color: #888;">Current time: {{ current_time }}</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div style="text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px;">
+    <p>&copy; 2024 Django Hello World Example</p>
+</div>
+{% endblock %} 

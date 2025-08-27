@@ -54,3 +54,21 @@ def getAPI(request):
 def first(request):
     return render(request,'first.html')
 
+def hello_world(request):
+    context = {
+        'current_time': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
+    return render(request, 'hello_world.html', context)
+
+
+def one(request):
+    return HttpResponse("<h1>This is the 'one' view!</h1>")
+
+
+def inc(request):
+    context = {'name': 'Aman'}
+    return render(request, 'child.html', context)
+
+def two(request):
+    return HttpResponse("<h1>This is the 'two' view!</h1>")
+
